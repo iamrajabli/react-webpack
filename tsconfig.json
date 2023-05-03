@@ -8,6 +8,16 @@
     "allowJs": true,
     "moduleResolution": "node",
     "baseUrl": ".",
+    "paths": {
+      "*": ["./src/*"],
+      "shared": ["./src/shared/*"],
+      "widgets": ["./src/widgets/*"],
+      "components": ["./src/components/*"],
+      "app": ["./src/app/*"],
+      "featues": ["./src/featues/*"],
+      "pages": ["./src/pages/*"],
+      "config": ["./config/*"]
+    },
 
     // The above sample assumes version >= 2.7 or newer of TypeScript is used with the new esModuleInterop and allowSyntheticDefaultImports compiler options in your tsconfig.json file.
     "esModuleInterop": true,
