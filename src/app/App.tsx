@@ -4,7 +4,7 @@ import AppRouter from 'app/providers/router/ui/AppRouter';
 import { classNames } from 'shared/lib/classNames/classNames';
 
 import { Navbar } from 'widgets/Navbar';
-import { ThemeSwitcher } from 'widgets/ThemeSwitcher';
+import { Sidebar } from 'widgets/Sidebar';
 
 export const App = () => {
   const { theme } = useTheme();
@@ -12,8 +12,10 @@ export const App = () => {
   return (
     <div className={classNames('app', {}, [theme])}>
       <Navbar />
-      <AppRouter />
-      <ThemeSwitcher className='hikmat'/>
+      <div className='content-page'>
+        <Sidebar />
+        <AppRouter />
+      </div>
     </div>
   );
 };

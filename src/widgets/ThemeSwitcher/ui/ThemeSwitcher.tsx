@@ -18,7 +18,7 @@ export const ThemeSwitcher: FC<ThemeSwitcherProps> = ({ className }) => {
   const { theme, toggleTheme } = useTheme();
 
   return (
-    <Button onClick={toggleTheme} className={classNames(cls.ThemeSwitcher, {}, [cls[className]])}>
+    <Button onClick={toggleTheme} className={classNames(cls.ThemeSwitcher, {}, [className])}>
       {theme === Theme.DARK ? <ThemeDark /> : <ThemeLight />}
     </Button>
   );
