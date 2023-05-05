@@ -16,3 +16,5 @@ declare module '*.(jpg|png|jpeg|gif|json)' {
   const content: string;
   export default content;
 }
+
+declare const __IS_DEV__: boolean;

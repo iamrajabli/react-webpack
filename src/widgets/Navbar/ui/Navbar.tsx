@@ -10,6 +10,7 @@ interface NavbarProps {
 }
 
 export const Navbar: FC<NavbarProps> = ({ className }) => {
+  
   return (
     <div className={classNames(cls.Navbar, {}, [className])}>
       <div className={cls.links}>
