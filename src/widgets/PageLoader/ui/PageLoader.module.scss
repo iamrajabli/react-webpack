@@ -1,0 +1,8 @@
+.PageLoader {
+  min-height: calc(100vh - var(--navbar-height));
+  min-width: calc(100vw - var(--navbarh-width));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}

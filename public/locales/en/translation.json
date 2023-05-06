@@ -1,3 +1,6 @@
 {
-    "lang": "EN"
+  "lang": "EN",
+  "not-found": "Page not found!",
+  "main-page": "Main page",
+  "about-page": "About page"
 }

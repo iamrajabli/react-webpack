@@ -44,5 +44,6 @@ module.exports = {
     'react/function-component-definition': 'off',
     'no-underscore-dangle': 'off',
     'max-len': [2, { code: 150 }],
+    'jsx-quotes': 'off',
   },
 };
