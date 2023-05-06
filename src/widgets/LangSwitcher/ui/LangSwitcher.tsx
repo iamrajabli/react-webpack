@@ -15,13 +15,11 @@ interface LangSwitcherProps {
 export const LangSwitcher: FC<LangSwitcherProps> = ({ className }) => {
   const { i18n, t } = useTranslation('');
 
-  const onToggle = async () => await changeLanguage(i18n.language === 'en' ? 'az' : 'en');
+  const onToggle = async () => changeLanguage(i18n.language === 'en' ? 'az' : 'en');
 
   return (
-    <>
-      <Button onClick={onToggle} className={classNames(cls.LangSwitcher, {}, [className])}>
-        {t('lang')}
-      </Button>
-    </>
+    <Button onClick={onToggle} className={classNames(cls.LangSwitcher, {}, [className])}>
+      {t('lang')}
+    </Button>
   );
 };

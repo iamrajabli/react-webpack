@@ -7,18 +7,18 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import { Navbar } from 'widgets/Navbar';
 import { Sidebar } from 'widgets/Sidebar';
 
-export const App = () => {
+export function App() {
   const { theme } = useTheme();
 
   return (
     <div className={classNames('app', {}, [theme])}>
       <Suspense fallback={<div>loading...</div>}>
         <Navbar />
-        <div className='content-page'>
+        <div className="content-page">
           <Sidebar />
           <AppRouter />
         </div>
       </Suspense>
     </div>
   );
-};
+}

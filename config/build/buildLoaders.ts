@@ -3,6 +3,12 @@ import webpack from 'webpack';
 import { BuildOptions } from './types/config';
 
 export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
+  const typescriptLoader = {
+    test: /\.tsx?$/,
+    use: 'ts-loader',
+    exclude: /node_modules/,
+  };
+
   const babelLoader = {
     test: /\.(js|jsx|tsx)$/,
     exclude: /node_modules/,
@@ -46,12 +52,6 @@ export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
       // Compiles Sass to CSS
       'sass-loader',
     ],
-  };
-
-  const typescriptLoader = {
-    test: /\.tsx?$/,
-    use: 'ts-loader',
-    exclude: /node_modules/,
   };
 
   return [babelLoader, typescriptLoader, scssLoader, svgrLoader, fileLoader];
