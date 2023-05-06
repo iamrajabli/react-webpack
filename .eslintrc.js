@@ -2,6 +2,7 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
+    jest: true,
   },
   extends: [
     'plugin:react/recommended',
@@ -20,10 +21,12 @@ module.exports = {
   plugins: [
     'react',
     '@typescript-eslint',
+    'jest',
   ],
   globals: {
     __IS_DEV__: true,
     React: true,
+    describe: true,
   },
   rules: {
     'import/no-unresolved': 'off',
@@ -40,5 +43,6 @@ module.exports = {
     'react/jsx-props-no-spreading': 'off',
     'react/function-component-definition': 'off',
     'no-underscore-dangle': 'off',
+    'max-len': [2, { code: 150 }],
   },
 };
