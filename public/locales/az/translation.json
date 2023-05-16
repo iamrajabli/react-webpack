@@ -1,6 +1,9 @@
 {
-    "lang": "AZ",
-    "not-found": "Səhifə tapılmadı!",
-    "main-page": "Ana səhifə",
-    "about-page": "Haqqımızda"
+  "lang": "AZ",
+  "not-found": "Səhifə tapılmadı!",
+  "main-page": "Ana səhifə",
+  "about-page": "Haqqımızda",
+  "error-boundary-text": "Nəisə səhv getdi...",
+  "error-boundary-btn-text": "Səhifəni yenilə",
+  "bug-btn-text": "Xəta butonu"
 }

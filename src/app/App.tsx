@@ -2,6 +2,7 @@ import { Suspense } from 'react';
 
 import { useTheme } from 'app/providers/ThemeProvider/lib/useTheme';
 import AppRouter from 'app/providers/router/ui/AppRouter';
+import { ErrorBoundary } from 'app/providers/ErrorBoundary';
 
 import { classNames } from 'shared/lib/classNames/classNames';
 
@@ -13,13 +14,15 @@ export const App = () => {
 
   return (
     <div className={classNames('app', {}, [theme])}>
-      <Suspense fallback={<div>loading...</div>}>
-        <Navbar />
-        <div className='content-page'>
-          <Sidebar />
-          <AppRouter />
-        </div>
-      </Suspense>
+      <ErrorBoundary>
+        <Suspense fallback={<div>loading...</div>}>
+          <Navbar />
+          <div className='content-page'>
+            <Sidebar />
+            <AppRouter />
+          </div>
+        </Suspense>
+      </ErrorBoundary>
     </div>
   );
 };

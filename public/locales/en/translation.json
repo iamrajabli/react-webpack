@@ -2,5 +2,8 @@
   "lang": "EN",
   "not-found": "Page not found!",
   "main-page": "Main page",
-  "about-page": "About page"
+  "about-page": "About page",
+  "error-boundary-text": "Something went wrong...",
+  "error-boundary-btn-text": "Reload page",
+  "bug-btn-text": "Bug button"
 }
